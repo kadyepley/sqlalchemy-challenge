@@ -32,6 +32,8 @@ Before working on any of the APIs I would need to first establish how far back t
 
 For the API for precipitation, I created a list for the preciptation data to be populated by the dictionary for both the dates and their precipitation data. After appending this list, I then returned a JSON representation of the dictionary using jsonify.
 
-For the Stations Page, I queried for the stations column in the Station table and used the list function to generated the list of tuples. I then returned a JSON representation of the list using jsonify.
+For the Stations page, I queried for the stations column in the Station table and used the list function to generated the list of tuples. I then returned a JSON representation of the list using jsonify.
 
-The Tobs Page started with a query for the data where the data was more than or equal to the first date in the dataset defined previously. Similarly to the 
+The Tobs page started with a query for the data where the data was more than or equal to the first date in the dataset defined previously. Similarly to the precipitation page, the data filtered for the past years dates would then be added to a list as appended dictionaries for the dates and the tobs columns. Using jsonify, I produced a JSON representation of the list. 
+
+The last two pages would the Start Date and Start-End Range data pulls. I created the list for the data I waned to query for, the minimum, average, and maximum tobs. I then looped through this data to filter for the dates after the start date and to return this as a JSON representation. Using else, I then added the additional filter for a start date and end date, resulting in a JSON representation as well. 
